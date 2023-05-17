@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendar Input</title>
+  <style>
+    /* CSS styling for the input field */
+    .input-container {
+      display: flex;
+      align-items: center;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    input[type="date"] {
+      padding: 5px;
+    }
+
+    button {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-container">
+    <label for="calendar">Select a date:</label>
+    <input type="date" id="calendar" name="calendar" required>
+    <button onclick="getDate()">Submit</button>
+  </div>
+
+  <script>
+    function getDate() {
+      var selectedDate = document.getElementById("calendar").value;
+      alert("Selected date: " + selectedDate);
+    }
+  </script>
+</body>
+</html>
